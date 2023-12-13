@@ -19,7 +19,8 @@ shinyUI(pageWithSidebar(
                      numericInput("OR", "Smallest difference of clinical/biological importance:", min = 0.01, max = 100, value = 1.5),
                      numericInput("r", "The ratio of Case/Control:", min = 0.01, max = 100, value = 1),
                      numericInput("p0", "Proportion of controls with exposures:", min = 0.001, max = 0.999, value = 0.2) 
-    )  
+    ),
+    radioButtons("Color", "Select the color of histogram:", choices = c("Red" = "red", "Blue" = "blue", "Green" = "green"))
   ),
   
   mainPanel(
